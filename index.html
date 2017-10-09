@@ -61,7 +61,7 @@ $(document).ready(function(){
 let addItem = () => {
     const list = $('.list-group')
     const item = $('#inputItem').val()
-    const itemID = item.trim().replace(/\s/g, '')
+    const itemID = item.trim().replace(/\W/g, '')
     if(item.trim() !== '')
       list.append(`<a href="#" class="list-group-item" id="${itemID}" onclick="removeItem(${itemID})">${item}</a>`)
       $('#inputItem').val('')
